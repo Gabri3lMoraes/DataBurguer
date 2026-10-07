@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10100f" />
+    <meta name="description" content="DataBurguer — MVP acadêmico de banco operacional, ETL, Spark, Parquet, API e analytics." />
+    <title>DataBurguer · Painel Acadêmico</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="DataBurguer início">
+        <span class="brand-mark">DB</span>
+        <span><strong>DataBurguer</strong><small>Engenharia de Dados para Delivery</small></span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#painel">Painel</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#arquitetura">Arquitetura</a>
+        <a href="#evidencias">Evidências</a>
+      </nav>
+      <span class="live"><i></i> Demonstração online</span>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <span class="eyebrow">MVP ACADÊMICO · SISTEMAS DE INFORMAÇÃO</span>
+          <h1>Dados que saem da<br /><em>operação</em> e viram decisão.</h1>
+          <p>Um delivery completo para demonstrar integridade transacional, ETL, processamento distribuído e análise de dados — da criação do pedido ao dashboard.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#painel">Explorar resultados <span>↘</span></a>
+            <a class="button secondary" href="#arquitetura">Ver arquitetura</a>
+          </div>
+          <div class="stack-list" aria-label="Tecnologias">
+            <span>PostgreSQL</span><span>FastAPI</span><span>PySpark</span><span>Parquet</span><span>Streamlit</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Resumo do fluxo de dados">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="data-core"><span>10K</span><small>eventos<br />processados</small></div>
+          <div class="float-card card-a"><b>01</b><span>Pedido</span><small>Transação ACID</small></div>
+          <div class="float-card card-b"><b>02</b><span>ETL</span><small>CSV + JSON</small></div>
+          <div class="float-card card-c"><b>03</b><span>Analytics</span><small>Serving layer</small></div>
+          <div class="signal s1"></div><div class="signal s2"></div><div class="signal s3"></div>
+        </div>
+      </section>
+
+      <section class="dashboard section" id="painel">
+        <div class="section-head">
+          <div><span class="eyebrow">RESULTADOS DO ÚLTIMO PIPELINE</span><h2>Painel analítico</h2></div>
+          <div class="snapshot"><span></span> Snapshot validado em PostgreSQL</div>
+        </div>
+
+        <div class="kpi-grid" id="kpis"></div>
+
+        <div class="chart-grid">
+          <article class="panel sales-panel">
+            <div class="panel-head"><div><small>FATURAMENTO</small><h3>Vendas por dia</h3></div><span class="panel-tag">30 dias</span></div>
+            <div class="line-chart" id="salesChart" aria-label="Gráfico de vendas diárias"></div>
+            <div class="chart-footer"><span>31 AGO</span><span>15 SET</span><span>29 SET</span></div>
+          </article>
+          <article class="panel city-panel">
+            <div class="panel-head"><div><small>DISTRIBUIÇÃO</small><h3>Acessos por cidade</h3></div><span class="panel-tag orange">PE</span></div>
+            <div class="bar-list" id="cityChart"></div>
+          </article>
+          <article class="panel page-panel">
+            <div class="panel-head"><div><small>COMPORTAMENTO</small><h3>Páginas acessadas</h3></div><span class="panel-tag">Top 7</span></div>
+            <div class="horizontal-bars" id="pageChart"></div>
+          </article>
+          <article class="panel status-panel">
+            <div class="panel-head"><div><small>QUALIDADE</small><h3>Status HTTP</h3></div><span class="panel-tag green">91,2% válidos</span></div>
+            <div class="donut-wrap">
+              <div class="donut"><span>10.000<small>requisições</small></span></div>
+              <div class="legend" id="statusLegend"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="pipeline section" id="pipeline">
+        <div class="section-head light">
+          <div><span class="eyebrow">DESAFIOS 1 · 2 · 3</span><h2>Um fluxo, três competências</h2></div>
+          <p>O mesmo MVP conecta operação transacional, integração de fontes e processamento de logs.</p>
+        </div>
+        <div class="challenge-grid">
+          <article class="challenge">
+            <span class="challenge-number">01</span><div class="challenge-icon">↻</div>
+            <h3>Banco operacional</h3>
+            <p>Pedido, itens, pagamento e baixa de estoque confirmados na mesma transação.</p>
+            <ul><li>Bloqueio de linha</li><li>Preço calculado no servidor</li><li>Rollback automático</li></ul>
+            <div class="proof"><span>Teste real</span><strong>557 → 555</strong><small>estoque após pedido #101</small></div>
+          </article>
+          <article class="challenge featured">
+            <span class="challenge-number">02</span><div class="challenge-icon">◇</div>
+            <h3>ETL integrado</h3>
+            <p>Arquivos imperfeitos são extraídos, limpos, padronizados e integrados.</p>
+            <ul><li>CSV + JSON</li><li>Deduplicação e validação</li><li>Carga em Parquet + PostgreSQL</li></ul>
+            <div class="proof"><span>Qualidade</span><strong>2 rejeitados</strong><small>duplicidades identificadas</small></div>
+          </article>
+          <article class="challenge">
+            <span class="challenge-number">03</span><div class="challenge-icon">⌁</div>
+            <h3>Logs em escala</h3>
+            <p>Processamento MapReduce por cidade, página, horário, data e status HTTP.</p>
+            <ul><li>Map · Shuffle · Reduce</li><li>Partição diária</li><li>Operacional isolado</li></ul>
+            <div class="proof"><span>Volume MVP</span><strong>10.000</strong><small>eventos processados</small></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="architecture section" id="arquitetura">
+        <div class="section-head">
+          <div><span class="eyebrow">ARQUITETURA LAMBDA</span><h2>Separação que protege a operação</h2></div>
+          <p>A análise pesada nunca consulta diretamente as tabelas transacionais.</p>
+        </div>
+        <div class="architecture-map">
+          <div class="arch-column">
+            <small>FONTES</small>
+            <div class="arch-node"><i class="dot orange"></i><span><b>Delivery</b><small>Pedidos e estoque</small></span></div>
+            <div class="arch-node"><i class="dot yellow"></i><span><b>CSV + JSON</b><small>Fontes heterogêneas</small></span></div>
+            <div class="arch-node"><i class="dot pink"></i><span><b>Logs</b><small>Eventos de acesso</small></span></div>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-column central">
+            <small>PROCESSAMENTO</small>
+            <div class="arch-node strong"><i class="db-icon">▱</i><span><b>PostgreSQL OLTP</b><small>Transações ACID</small></span></div>
+            <div class="arch-node strong"><i class="db-icon">⇄</i><span><b>ETL + Spark</b><small>Batch layer</small></span></div>
+            <div class="arch-node strong"><i class="db-icon">▦</i><span><b>Parquet</b><small>Data lake particionado</small></span></div>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-column">
+            <small>SERVING</small>
+            <div class="arch-node"><i class="dot blue"></i><span><b>Analytics DB</b><small>Tabelas agregadas</small></span></div>
+            <div class="arch-node"><i class="dot cyan"></i><span><b>FastAPI</b><small>Endpoints REST</small></span></div>
+            <div class="arch-node"><i class="dot green"></i><span><b>Dashboard</b><small>Decisão visual</small></span></div>
+          </div>
+        </div>
+        <div class="lambda-note"><span>ℹ</span><p><strong>Escopo honesto:</strong> o MVP implementa as camadas batch e serving. Kafka é apresentado como evolução arquitetural da speed layer, não como recurso já instalado.</p></div>
+      </section>
+
+      <section class="inventory section" id="evidencias">
+        <div class="section-head light">
+          <div><span class="eyebrow">EVIDÊNCIAS OPERACIONAIS</span><h2>Estoque após 101 pedidos</h2></div>
+          <p>Dados capturados do PostgreSQL após a validação da API.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Produto</th><th>Categoria</th><th>Preço</th><th>Estoque atual</th><th>Status</th></tr></thead>
+            <tbody id="productRows"></tbody>
+          </table>
+        </div>
+        <div class="evidence-grid">
+          <div><span>✓</span><b>11 testes aprovados</b><small>pytest, sem falhas</small></div>
+          <div><span>✓</span><b>Rollback verificado</b><small>pedido e estoque consistentes</small></div>
+          <div><span>✓</span><b>PostgreSQL saudável</b><small>container com healthcheck</small></div>
+          <div><span>✓</span><b>Parquet particionado</b><small>4 partições diárias</small></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="brand"><span class="brand-mark">DB</span><span><strong>DataBurguer</strong><small>Projeto acadêmico · Sistemas de Informação</small></span></div>
+      <p>Python · PostgreSQL · SQLAlchemy · FastAPI · Pandas · PySpark · Streamlit · Docker</p>
+      <span class="footer-note">Painel público de apresentação com snapshot real do pipeline local.</span>
+    </footer>
+    <script src="/app.js"></script>
+  </body>
+</html>

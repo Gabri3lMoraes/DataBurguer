@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: databurguer-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-databurguer}
+      POSTGRES_USER: ${POSTGRES_USER:-databurguer}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-databurguer}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U databurguer -d databurguer"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+
+  api:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    environment:
+      DATABASE_URL: postgresql+psycopg://databurguer:databurguer@postgres:5432/databurguer
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  dashboard:
+    build: .
+    command: streamlit run dashboard/app.py --server.address 0.0.0.0 --server.port 8501
+    environment:
+      DATABASE_URL: postgresql+psycopg://databurguer:databurguer@postgres:5432/databurguer
+      API_URL: http://api:8000
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:

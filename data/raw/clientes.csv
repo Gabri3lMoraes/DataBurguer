@@ -1,0 +1,52 @@
+cliente_id,nome,email,telefone,cidade,estado,criado_em
+1,  BRUNO SILVA  ,cliente1@databurguer.local,(81) 95506-5012,Olinda,PE,2026-06-20 23:24:38.749007
+2,Bruno Ferreira,cliente2@databurguer.local,(81) 92424-7912,recife ,PE,2026-08-15 23:24:38.760714
+3,Bruno Souza,cliente3@databurguer.local,(81) 94811-9279,JABOATAO,PE,2025-11-16 23:24:38.760714
+4,Daniel Ferreira,cliente4@databurguer.local,,Jaboatão dos Guararapes,PE,2025-11-02 23:24:38.760714
+5,Eduarda Silva,cliente5@databurguer.local,(81) 93615-7924,Paulista,PE,2026-04-10 23:24:38.760714
+6,Carla Souza,cliente6@databurguer.local,(81) 96514-2674,Recife,PE,2026-02-17 23:24:38.760714
+7,Bruno Costa,cliente7@databurguer.local,(81) 96635-5333,Recife,PE,2026-01-07 23:24:38.760714
+8,Isabela Santos,cliente8@databurguer.local,(81) 97201-2291,Paulista,PE,2025-10-13 23:24:38.760714
+9,João Costa,cliente9@databurguer.local,(81) 94150-2139,Recife,PE,2026-05-06 23:24:38.760714
+10,Eduarda Santos,cliente10@databurguer.local,(81) 94814-2654,Jaboatão dos Guararapes,PE,2026-04-10 23:24:38.760714
+11,Henrique Costa,cliente11@databurguer.local,(81) 93664-7065,Paulista,PE,2026-05-15 23:24:38.760714
+12,Eduarda Santos,cliente12@databurguer.local,(81) 93803-9751,Olinda,PE,2026-06-08 23:24:38.760714
+13,Henrique Almeida,cliente13@databurguer.local,(81) 95422-4598,Paulista,PE,2026-08-02 23:24:38.760714
+14,Daniel Silva,cliente14@databurguer.local,(81) 96168-7572,Paulista,PE,2026-07-28 23:24:38.760714
+15,Daniel Gomes,cliente15@databurguer.local,(81) 96155-4483,Jaboatão dos Guararapes,PE,2026-02-09 23:24:38.760714
+16,Henrique Oliveira,cliente16@databurguer.local,(81) 95339-3287,Olinda,PE,2025-11-16 23:24:38.761713
+17,Isabela Lima,cliente17@databurguer.local,(81) 98019-7543,Paulista,PE,2026-05-10 23:24:38.761713
+18,Carla Ferreira,cliente18@databurguer.local,(81) 99085-2489,Recife,PE,2026-07-05 23:24:38.761713
+19,Carla Oliveira,cliente19@databurguer.local,(81) 97916-2040,Jaboatão dos Guararapes,PE,2026-02-16 23:24:38.761713
+20,João Pereira,cliente20@databurguer.local,(81) 99669-5119,Recife,PE,2026-07-03 23:24:38.761713
+21,Isabela Lima,cliente21@databurguer.local,(81) 96573-2827,Paulista,PE,2026-01-20 23:24:38.761713
+22,Carla Pereira,cliente22@databurguer.local,(81) 91053-5315,Olinda,PE,2025-12-14 23:24:38.761713
+23,Bruno Lima,cliente23@databurguer.local,(81) 99317-4258,Olinda,PE,2026-02-20 23:24:38.761713
+24,Carla Ferreira,cliente24@databurguer.local,(81) 99689-1009,Paulista,PE,2025-12-23 23:24:38.761713
+25,Ana Santos,cliente25@databurguer.local,(81) 96947-6038,Olinda,PE,2026-08-01 23:24:38.761713
+26,Daniel Gomes,cliente26@databurguer.local,(81) 92290-2403,Jaboatão dos Guararapes,PE,2026-07-26 23:24:38.761713
+27,Isabela Oliveira,cliente27@databurguer.local,(81) 93103-8787,Olinda,PE,2026-04-17 23:24:38.761713
+28,Isabela Gomes,cliente28@databurguer.local,(81) 97932-4470,Olinda,PE,2026-03-24 23:24:38.761713
+29,Gabriela Costa,cliente29@databurguer.local,(81) 98177-9479,Jaboatão dos Guararapes,PE,2026-06-30 23:24:38.761713
+30,Daniel Souza,cliente30@databurguer.local,(81) 92049-6539,Recife,PE,2025-11-02 23:24:38.761713
+31,Isabela Souza,cliente31@databurguer.local,(81) 94608-1117,Recife,PE,2025-10-11 23:24:38.761713
+32,Ana Souza,cliente32@databurguer.local,(81) 92104-1514,Paulista,PE,2026-07-25 23:24:38.761713
+33,Isabela Souza,cliente33@databurguer.local,(81) 95562-8953,Olinda,PE,2025-11-27 23:24:38.761713
+34,Carla Gomes,cliente34@databurguer.local,(81) 98744-4981,Jaboatão dos Guararapes,PE,2026-02-03 23:24:38.761713
+35,Daniel Santos,cliente35@databurguer.local,(81) 92588-8062,Paulista,PE,2026-01-26 23:24:38.761713
+36,Gabriela Pereira,cliente36@databurguer.local,(81) 91887-2612,Recife,PE,2026-02-05 23:24:38.761713
+37,Felipe Santos,cliente37@databurguer.local,(81) 95073-4139,Olinda,PE,2025-11-29 23:24:38.761713
+38,Henrique Oliveira,cliente38@databurguer.local,(81) 97912-4006,Paulista,PE,2026-01-06 23:24:38.761713
+39,Daniel Santos,cliente39@databurguer.local,(81) 98260-2604,Recife,PE,2025-10-01 23:24:38.761713
+40,Isabela Silva,cliente40@databurguer.local,(81) 92528-4872,Olinda,PE,2026-02-03 23:24:38.761713
+41,Henrique Pereira,cliente41@databurguer.local,(81) 94502-7570,Recife,PE,2026-06-07 23:24:38.761713
+42,Gabriela Silva,cliente42@databurguer.local,(81) 97396-5345,Jaboatão dos Guararapes,PE,2026-04-06 23:24:38.761713
+43,Gabriela Ferreira,cliente43@databurguer.local,(81) 98973-3536,Olinda,PE,2026-04-01 23:24:38.761713
+44,Daniel Silva,cliente44@databurguer.local,(81) 99883-1998,Paulista,PE,2026-08-01 23:24:38.761713
+45,Ana Gomes,cliente45@databurguer.local,(81) 98811-9238,Olinda,PE,2026-08-01 23:24:38.761713
+46,Isabela Santos,cliente46@databurguer.local,(81) 94044-2122,Recife,PE,2026-05-02 23:24:38.761713
+47,Gabriela Santos,cliente47@databurguer.local,(81) 95033-1651,Recife,PE,2026-01-28 23:24:38.761713
+48,João Gomes,cliente48@databurguer.local,(81) 99565-6183,Paulista,PE,2026-05-18 23:24:38.761713
+49,Felipe Souza,cliente49@databurguer.local,(81) 95351-7484,Olinda,PE,2025-10-04 23:24:38.761713
+50,Eduarda Pereira,cliente50@databurguer.local,(81) 96180-2188,Recife,PE,2026-01-08 23:24:38.761713
+1,registro duplicado,cliente1@databurguer.local,(81) 95506-5012,Olinda,PE,2026-06-20 23:24:38.749007
