@@ -42,7 +42,7 @@ flowchart LR
 
 ## Tecnologias
 
-Python 3.12, PostgreSQL 16, SQLAlchemy 2, FastAPI, Pydantic 2, Pandas, PyArrow, PySpark 3.5, Streamlit, Faker, Pytest, Docker e Docker Compose.
+Python 3.12, PostgreSQL 16, SQLAlchemy 2, FastAPI, Pydantic 2, Pandas, PyArrow, PySpark 3.5, Streamlit, Pytest, Docker e Docker Compose.
 
 ## Estrutura
 
